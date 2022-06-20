@@ -20,3 +20,11 @@
 // Costruiamo del carosello una versione statica contenente solamente un'immagine. Di questa versione statica al momento opportuno commenteremo (oscureremo) alcuni elementi per poterli riprodurre dinamicamente in js. Potremo quindi usarli come "template".
 // Scriviamo sempre prima per punti il nostro algoritmo in italiano per capire cosa vogliamo fare
 // Al momento giusto (ihihhi starà a voi capire quale) rispondete a questa domanda: "Quanti cicli servono?"
+
+
+let indexActive= 1;
+const imgWrapper = document.querySelector('.carousel-wrapper .carousel-img-container');
+const imgList=imgWrapper.children;
+
+imgList[indexActive].classList.add('active');
+const nextBtn=document.getElementById('next-btn');
