@@ -1,3 +1,7 @@
+body{
+    background-color:lightseagreen ; 
+}
+
 .carousel-wrapper .carousel-img-container{
     height: 770px;
 }
