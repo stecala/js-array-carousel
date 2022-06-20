@@ -21,6 +21,12 @@
 // Scriviamo sempre prima per punti il nostro algoritmo in italiano per capire cosa vogliamo fare
 // Al momento giusto (ihihhi starà a voi capire quale) rispondete a questa domanda: "Quanti cicli servono?"
 
+const arrayImg = ['./img/1.jpg', './img/2.jpg', './img/3.jpg', './img/4.jpg'];
+for (i = 0; i < arrayImg.length; i++) {
+    const newImg = document.createElement('img');
+    newImg.classList.add('d-none');
+    newImg.setAttribute('src', arrayImg[i]);
+}
 
 let indexActive= 0;
 const imgWrapper = document.querySelector('.carousel-wrapper .carousel-img-container');
