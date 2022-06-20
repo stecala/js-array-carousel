@@ -29,12 +29,24 @@ const imgList=imgWrapper.children;
 imgList[indexActive].classList.add('active');
 imgList[indexActive].classList.remove('d-none');
 const nextBtn=document.getElementById('next-btn');
+const prevBtn=document.getElementById('prev-btn');
 nextBtn.addEventListener('click', function(){
     imgList[indexActive].classList.remove('active');
     imgList[indexActive].classList.add('d-none');
     indexActive++;
     if(indexActive===imgList.length){
         indexActive=0;
+    }
+    imgList[indexActive].classList.remove('d-none');
+    imgList[indexActive].classList.add('active');
+    console.log(indexActive);
+})
+prevBtn.addEventListener('click', function(){
+    imgList[indexActive].classList.remove('active');
+    imgList[indexActive].classList.add('d-none');
+    indexActive--;
+    if(indexActive===-1){
+        indexActive=imgList.length-1;
     }
     imgList[indexActive].classList.remove('d-none');
     imgList[indexActive].classList.add('active');
