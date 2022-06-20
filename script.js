@@ -22,14 +22,20 @@
 // Al momento giusto (ihihhi starà a voi capire quale) rispondete a questa domanda: "Quanti cicli servono?"
 
 const arrayImg = ['./img/1.jpg', './img/2.jpg', './img/3.jpg', './img/4.jpg'];
+let indexActive= 0;
+const imgWrapper = document.querySelector('.carousel-wrapper .carousel-img-container');
+const thumbWrapper= document.querySelector('.thumbnail');
 for (i = 0; i < arrayImg.length; i++) {
     const newImg = document.createElement('img');
     newImg.classList.add('d-none');
     newImg.setAttribute('src', arrayImg[i]);
+    imgWrapper.append(newImg); 
+    const thumb = document.createElement('div');
+    thumb.classList.add('thumb');
+    thumbWrapper.append(thumb); 
 }
 
-let indexActive= 0;
-const imgWrapper = document.querySelector('.carousel-wrapper .carousel-img-container');
+
 const imgList=imgWrapper.children;
 
 imgList[indexActive].classList.add('active');
