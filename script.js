@@ -37,6 +37,9 @@ for (i = 0; i < arrayImg.length; i++) {
 
 
 const imgList=imgWrapper.children;
+const thumbList=thumbWrapper.children;
+thumbList[indexActive].classList.add('thumb-active');
+thumbList[indexActive].classList.remove('thumb');
 
 imgList[indexActive].classList.add('active');
 imgList[indexActive].classList.remove('d-none');
@@ -45,22 +48,31 @@ const prevBtn=document.getElementById('prev-btn');
 nextBtn.addEventListener('click', function(){
     imgList[indexActive].classList.remove('active');
     imgList[indexActive].classList.add('d-none');
+    thumbList[indexActive].classList.remove('thumb-active');
+    thumbList[indexActive].classList.add('thumb');
     indexActive++;
     if(indexActive===imgList.length){
         indexActive=0;
     }
     imgList[indexActive].classList.remove('d-none');
     imgList[indexActive].classList.add('active');
+    thumbList[indexActive].classList.remove('thumb');
+    thumbList[indexActive].classList.add('thumb-active');
+
     console.log(indexActive);
 })
 prevBtn.addEventListener('click', function(){
     imgList[indexActive].classList.remove('active');
     imgList[indexActive].classList.add('d-none');
+    thumbList[indexActive].classList.remove('thumb-active');
+    thumbList[indexActive].classList.add('thumb');
     indexActive--;
     if(indexActive===-1){
         indexActive=imgList.length-1;
     }
     imgList[indexActive].classList.remove('d-none');
     imgList[indexActive].classList.add('active');
+    thumbList[indexActive].classList.remove('thumb');
+    thumbList[indexActive].classList.add('thumb-active');
     console.log(indexActive);
 })

@@ -28,9 +28,18 @@
     height: 50px;
 }
 .thumb{
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
+    border: black 2px solid;
     background-color: black;
+    margin: 10px;
+}
+.thumb-active{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: black 2px solid;
+    background-color: white;
     margin: 10px;
 }
