@@ -22,9 +22,21 @@
 // Al momento giusto (ihihhi starà a voi capire quale) rispondete a questa domanda: "Quanti cicli servono?"
 
 
-let indexActive= 1;
+let indexActive= 0;
 const imgWrapper = document.querySelector('.carousel-wrapper .carousel-img-container');
 const imgList=imgWrapper.children;
 
 imgList[indexActive].classList.add('active');
+imgList[indexActive].classList.remove('d-none');
 const nextBtn=document.getElementById('next-btn');
+nextBtn.addEventListener('click', function(){
+    imgList[indexActive].classList.remove('active');
+    imgList[indexActive].classList.add('d-none');
+    indexActive++;
+    if(indexActive===imgList.length){
+        indexActive=0;
+    }
+    imgList[indexActive].classList.remove('d-none');
+    imgList[indexActive].classList.add('active');
+    console.log(indexActive);
+})
